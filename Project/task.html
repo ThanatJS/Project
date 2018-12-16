@@ -23,6 +23,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
+        
+        //***scritpt datepicker***//
     $(function() {
       $( "#datepicker1" ).datepicker();
       $( "#datepicker2" ).datepicker();
@@ -35,7 +37,9 @@
       $( "#datepicker9" ).datepicker();
       $( "#datepicker10" ).datepicker();
     } );
+        //***//
 
+        //***script addsubtask***//
     $(document).ready(function() {
         var i = 1;
         var r = 3;
@@ -46,7 +50,9 @@
            $(this).parent('div').before(domElement);
        });
     });
+        //***//
 
+        //***script deletesubtask***//
     $(document).on('click','#cancel',function() {
         var c = confirm("ยืนยันการลบที่จะลบ SubTask นี้");
         if (c == true){
@@ -54,13 +60,14 @@
         }
     
     });
+        //***//
 
-
+        //***script confrimrefresh***//
     window.onbeforeunload = function () 
     {
         return "ข้อมูลไม่ได้บันทึก";
     };
-
+        //***//
    
     </script>
     <!-- end datepicker script -->
