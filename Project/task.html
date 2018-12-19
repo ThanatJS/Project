@@ -1,219 +1,219 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    
-    <!-- datepicker script-->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         
-        //***scritpt datepicker***//
-    $(function() {
-      $( "#datepicker1" ).datepicker();
-      $( "#datepicker2" ).datepicker();
-      $( "#datepicker3" ).datepicker();
-      $( "#datepicker4" ).datepicker();
-      $( "#datepicker5" ).datepicker();
-      $( "#datepicker6" ).datepicker();
-      $( "#datepicker7" ).datepicker();
-      $( "#datepicker8" ).datepicker();
-      $( "#datepicker9" ).datepicker();
-      $( "#datepicker10" ).datepicker();
-    } );
-        //***//
+        <!-- datepicker script-->
+        <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+        <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+        <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+        <script>
+            
+            //***scritpt datepicker***//
+        $(function() {
+        $( "#datepicker1" ).datepicker();
+        $( "#datepicker2" ).datepicker();
+        $( "#datepicker3" ).datepicker();
+        $( "#datepicker4" ).datepicker();
+        $( "#datepicker5" ).datepicker();
+        $( "#datepicker6" ).datepicker();
+        $( "#datepicker7" ).datepicker();
+        $( "#datepicker8" ).datepicker();
+        $( "#datepicker9" ).datepicker();
+        $( "#datepicker10" ).datepicker();
+        } );
+            //***//
 
-        //***script addsubtask***//
-    $(document).ready(function() {
-        var i = 1;
-        var r = 3;
-       $("#add").click(function() {     
-           i++;
-           r++;
-           var domElement = $('<div class="card" id="subtask'+i+'"><div class="card-body shadow"><div class="row"><div class="col-sm-6"><div class="form-group"><label for="taskname">Sub Task Name :</label><input type="text" class="form-control" id="taskname"></div></div><div class="col-sm-1"></div><div class="col-sm-4"><div class="input-group"><label class="label" for="step" style="margin-right: 10px">Step :</label><div class="rs-select2 js-select-simple select--no-search " style="width: 100px"><select name="step"><option>1</option><option>2</option><option>3</option></select><div class="select-dropdown"></div></div><label class="label" for="level" style="margin-right: 10px">Level :</label><div class="rs-select2 js-select-simple select--no-search " style="width: 100px"><select name="level"><option>1</option><option>2</option><option>3</option></select><div class="select-dropdown"></div></div></div></div><div class="col-sm-1"><a href="#" id="cancel"><img src = "icon/cancel.png" ></a></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="comment">Description for Developer :</label><textarea class="form-control" rows="5" id="comment"></textarea></div></div></div><div class="row"><div class="col-sm-8"> <div class="input-group"><label class="label" style="margin-right: 10px">ผู้รับมอบหมาย :</label><input type="text" ></div><div class="form-group" style="margin-top: 20px"><input type="file" class="form-control-file" id="exampleFormControlFile1"></div></div><div class="col-sm-4"><div class="input-group"><label class="label" style="margin-right: 10px">Send Date :</label><input type="text" id="datepicker'+r+'"></div></div></div></div></div>');
-           $(this).parent('div').before(domElement);
-       });
-    });
-        //***//
+            //***script addsubtask***//
+        $(document).ready(function() {
+            var i = 1;
+            var r = 3;
+        $("#add").click(function() {     
+            i++;
+            r++;
+            var domElement = $('<div class="card" id="subtask'+i+'"><div class="card-body shadow"><div class="row"><div class="col-sm-6"><div class="form-group"><label for="taskname">Sub Task Name :</label><input type="text" class="form-control" id="taskname"></div></div><div class="col-sm-1"></div><div class="col-sm-4"><div class="input-group"><label class="label" for="step" style="margin-right: 10px">Step :</label><div class="rs-select2 js-select-simple select--no-search " style="width: 100px"><select name="step"><option>1</option><option>2</option><option>3</option></select><div class="select-dropdown"></div></div><label class="label" for="level" style="margin-right: 10px">Level :</label><div class="rs-select2 js-select-simple select--no-search " style="width: 100px"><select name="level"><option>1</option><option>2</option><option>3</option></select><div class="select-dropdown"></div></div></div></div><div class="col-sm-1"><a href="#" id="cancel"><img src = "icon/cancel.png" ></a></div></div><div class="row"><div class="col-sm-12"><div class="form-group"><label for="comment">Description for Developer :</label><textarea class="form-control" rows="5" id="comment"></textarea></div></div></div><div class="row"><div class="col-sm-8"> <div class="input-group"><label class="label" style="margin-right: 10px">ผู้รับมอบหมาย :</label><input type="text" ></div><div class="form-group" style="margin-top: 20px"><input type="file" class="form-control-file" id="exampleFormControlFile1"></div></div><div class="col-sm-4"><div class="input-group"><label class="label" style="margin-right: 10px">Send Date :</label><input type="text" id="datepicker'+r+'"></div></div></div></div></div>');
+            $(this).parent('div').before(domElement);
+        });
+        });
+            //***//
 
-        //***script deletesubtask***//
-    $(document).on('click','#cancel',function() {
-        var c = confirm("ยืนยันการลบที่จะลบ SubTask นี้");
-        if (c == true){
-          $(this).parent('div').parent('div').parent('div').parent('div').remove(); 
-        }
+            //***script deletesubtask***//
+        $(document).on('click','#cancel',function() {
+            var c = confirm("ยืนยันการลบที่จะลบ SubTask นี้");
+            if (c == true){
+            $(this).parent('div').parent('div').parent('div').parent('div').remove(); 
+            }
+        
+        });
+            //***//
+
+            //***script confrimrefresh***//
+        window.onbeforeunload = function () 
+        {
+            return "ข้อมูลไม่ได้บันทึก";
+        };
+            //***//
     
-    });
-        //***//
-
-        //***script confrimrefresh***//
-    window.onbeforeunload = function () 
-    {
-        return "ข้อมูลไม่ได้บันทึก";
-    };
-        //***//
-   
-    </script>
-    <!-- end datepicker script -->
-    
-    <title>Task</title>
-  </head>
-  <body>
-    <div class="container">
-        <div class="card shadow" style="margin-top: 50px;margin-bottom: 50px">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <label for="taskname">Task Name :</label>
-                            <input type="text" class="form-control" id="taskname">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                                <label for="comment">Description for Developer :</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">  
-                    <div class="card-body shadow">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label for="taskname">Sub Task Name :</label>
-                                    <input type="text" class="form-control" id="taskname">
-                                </div>
+        </script>
+        <!-- end datepicker script -->
+        
+        <title>Task</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card shadow" style="margin-top: 50px;margin-bottom: 50px">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="taskname">Task Name :</label>
+                                <input type="text" class="form-control" id="taskname">
                             </div>
-                            <div class="col-sm-1"></div>
-                            <div class="col-sm-4">
-                                <div class="input-group">
-                                    <label class="label" for="step" style="margin-right: 10px">Step :</label>
-                                        <div class="rs-select2 js-select-simple select--no-search " style="width: 100px">
-                                                <select name="step">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                </select>
-                                                <div class="select-dropdown"></div>
-                                        </div>
-                                        <label class="label" for="level" style="margin-right: 10px">Level :</label>
-                                        <div class="rs-select2 js-select-simple select--no-search " style="width: 100px">
-                                                <select name="level">
-                                                    <option>1</option>
-                                                    <option>2</option>
-                                                    <option>3</option>
-                                                </select>
-                                                <div class="select-dropdown"></div>
-                                        </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                    <label for="comment">Description for Developer :</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">  
+                        <div class="card-body shadow">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="taskname">Sub Task Name :</label>
+                                        <input type="text" class="form-control" id="taskname">
                                     </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="form-group">
-                                        <label for="comment">Description for Developer :</label>
-                                        <textarea class="form-control" rows="5" id="comment"></textarea>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-sm-8"> 
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-4">
                                     <div class="input-group">
-                                        <label class="label" style="margin-right: 10px">ผู้รับมอบหมาย :</label>
-                                        <input type="text" >
+                                        <label class="label" for="step" style="margin-right: 10px">Step :</label>
+                                            <div class="rs-select2 js-select-simple select--no-search " style="width: 100px">
+                                                    <select name="step">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                    <div class="select-dropdown"></div>
+                                            </div>
+                                            <label class="label" for="level" style="margin-right: 10px">Level :</label>
+                                            <div class="rs-select2 js-select-simple select--no-search " style="width: 100px">
+                                                    <select name="level">
+                                                        <option>1</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                    </select>
+                                                    <div class="select-dropdown"></div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                            <label for="comment">Description for Developer :</label>
+                                            <textarea class="form-control" rows="5" id="comment"></textarea>
                                     </div>
-                                    <div class="form-group" style="margin-top: 20px">
-                                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8"> 
+                                        <div class="input-group">
+                                            <label class="label" style="margin-right: 10px">ผู้รับมอบหมาย :</label>
+                                            <input type="text" >
+                                        </div>
+                                        <div class="form-group" style="margin-top: 20px">
+                                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                        </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="input-group">
+                                            <label class="label" style="margin-right: 10px">Send Date :</label>
+                                            <input type="text" id="datepicker1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center;margin-top: 20px">
+                        <a href="#div" id="add"><cneter><img src = "icon/plus.png" width="42px" height="42px"></a>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                    <label for="comment">Description for Tester :</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-sm-8">  
+                                    <div class="input-group">
+                                        <label class="label" style="margin-right: 10px">ผู้ทดสอบ :</label>
+                                        <input type="text" >
                                     </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="input-group">
                                         <label class="label" style="margin-right: 10px">Send Date :</label>
-                                        <input type="text" id="datepicker1">
+                                        <input type="text" id="datepicker2">
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div style="text-align: center;margin-top: 20px">
-                    <a href="#div" id="add"><cneter><img src = "icon/plus.png" width="42px" height="42px"></a>
-                </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                                <label for="comment">Description for Tester :</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                    <label for="comment">Description for Quality Assurance :</label>
+                                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                        <div class="col-sm-8">  
+                    <div class="row">
+                            <div class="col-sm-8">   
                                 <div class="input-group">
-                                    <label class="label" style="margin-right: 10px">ผู้ทดสอบ :</label>
+                                    <label class="label" style="margin-right: 10px">ผู้ตรวจงาน :</label>
                                     <input type="text" >
                                 </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="input-group">
-                                    <label class="label" style="margin-right: 10px">Send Date :</label>
-                                    <input type="text" id="datepicker2">
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="input-group">
+                                        <label class="label" style="margin-right: 10px">Send Date :</label>
+                                        <input type="text" id="datepicker3">
+                                </div>
+                            </div>
+                    </div>
+                    <div class="row" style="margin-top: 20px">
+                        <div class="col-sm-9">
+                            <div class="form-group">
+                                <input type="file" class="form-control-file" id="exampleFormControlFile1">
                             </div>
                         </div>
-                    </div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                                <label for="comment">Description for Quality Assurance :</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                        <div class="col-sm-2">
+                            <button type="button" class="btn btn-outline-danger">Back</button>
+                            <button type="button" class="btn btn-outline-primary">Submit</button>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                        <div class="col-sm-8">   
-                            <div class="input-group">
-                                <label class="label" style="margin-right: 10px">ผู้ตรวจงาน :</label>
-                                <input type="text" >
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="input-group">
-                                    <label class="label" style="margin-right: 10px">Send Date :</label>
-                                    <input type="text" id="datepicker3">
-                            </div>
-                        </div>
-                </div>
-                <div class="row" style="margin-top: 20px">
-                    <div class="col-sm-9">
-                        <div class="form-group">
-                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <button type="button" class="btn btn-outline-danger">Back</button>
-                        <button type="button" class="btn btn-outline-primary">Submit</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
-</html>
+    </body>
+    </html>
