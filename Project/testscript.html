@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Untitled Document</title>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+   <!-- Popper JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+   <!--  -->
+   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+   
+<script >
+   var vm = new vue({
+      el : "#div-app",
+      data : {
+         title : "hello",
+         powerBy: "code"
+      }
+   });
+</script>
+<script type="text/javascript">
+ 
+    jQuery(document).ready(function(){
+       
+       // ตั้งค่าเริ่มต้นจำนวนถัดไปของ Textbox 
+       var counter = 2;
+     
+       // เมื่อคลิกปุ่ม Add Button 
+       jQuery("#addButton").click(function () {
+    
+          // ตรวจสอบว่ามี Textbox มากกว่า 10 หรือไม่ ถ้ามากกว่า่ให้แจ้งกล่องข้อความ
+          // Textbox ไม่ให้เกิน 10
+          if(counter>10){
+             alert("Only 10 textboxes allow");
+             return false;
+          }   
+          
+          // ถ้า Textbox ยังไม่ถึง 10 ให้สร้าง Textbox ขึ้นมา
+          jQuery('#TextBoxesGroup').append('<div id="TextBoxDiv' + counter + '">');
+          jQuery('#TextBoxesGroup').append('<label>Textbox #' + counter + ' : </label>');
+          jQuery('#TextBoxesGroup').append('<input type="text" name="key[]" id="key[]" /></div>');
+          
+          // เพิ่มค่าของจำนวน Textbox 
+          counter++;
+       });
+     
+       // เมื่อคลิกปุ่ม Remove Button
+       jQuery("#removeButton").click(function () {
+          // ถ้าค่าจำนวนถัดไปของ Textbox เท่ากับ 1 ให้แจ้งข้อความเตือน
+          if(counter==1){
+             alert("No more textbox to remove");
+             return false;
+          }   
+          
+          // แต่ถ้าจำนวนยังไม่เท่ากับ 1 ให้ลดค่าลงไป 1
+          counter--;
+     
+          // ลบ Textbox โดยอ้างอิงจาก ID ของแท็ก Div ที่มี Textbox อยู่ภายใน
+          jQuery("#TextBoxDiv" + counter).remove();
+       });
+    
+       // เมื่อคลิกปุ่ม Get TextBox Value
+       jQuery("#getButtonValue").click(function () {
+          
+          // สร้างตัวแปรสำหรับเก็บค่าของ TextBox แต่ละตัว
+          var msg = '';
+    
+          // วนรอบเก็บค่าของ TextBox แต่ละตัวไว้ที่ตัวแปร
+          for(i=1; i<counter; i++){
+             msg += "\n Textbox #" + i + " : " + $('#textbox' + i).val();
+          }
+    
+          // แสดงค่าที่อยู่ใน TextBox แต่ละตัว
+          alert(msg);
+       });
+    
+    });
+    </script>
+</head>
+
+<body>
+    <div id='TextBoxesGroup'>
+        <div id="TextBoxDiv1">
+           <label>Textbox #1 : </label><input type='textbox' id='textbox1' >
+        </div>
+     </div>
+     <input type='button' value='Add Button' id='addButton'>
+     <input type='button' value='Remove Button' id='removeButton'>
+     <input type='button' value='Get TextBox Value' id='getButtonValue'>
+     <div id="div-app">
+        {{title}}
+     </div>
+</body>
+<script >
+      var vm = new vue({
+         el : "#div-app",
+         data : {
+            title : "hello",
+            powerBy: "code"
+         }
+      });
+   </script>
+</html>
+
+
